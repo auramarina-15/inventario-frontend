@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import { Nav } from "../components/React-components/Nav";
+import { ViewTransitions } from "astro:transitions";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/img/icon2.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <ViewTransitions />
+    <meta name="generator" content={Astro.generator} />
+    <title>IM - {title}</title>
+  </head>
+  <body>
+    <section class="flex flex-col h-screen">
+      <div
+        class="grid md:grid-cols-[200px_1fr] h-full gap-[10px] md:px-[10px] bg-[var(--bg-primary)]">
+        <div class="md:rounded-xl md:ml-[10px] md:mt-[10px]">
+          <Nav client:idle />
+        </div>
+        <main
+          class="md:m-5 bg-[var(--bg-secundary)] rounded-2xl p-1 md:p-2 order-1 h-[calc(100vh-80px)] md:h-[calc(100vh-40px)] overflow-y-auto">
+          <slot />
+        </main>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

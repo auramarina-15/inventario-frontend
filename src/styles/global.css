@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+
+    themes: nord --default;
+
+}
+
+
+:root {
+
+    --bg-primary: #D9D9D9 ;
+    --bg-secundary: #E8E8E8;
+
+
+    --primary: #019aa8;
+    --secondary: #268890;
+    --text-main: #202020;
+    --text: #1e293b;
+}
