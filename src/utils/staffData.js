@@ -1,5 +1,4 @@
-
-const urlBase = "http://localhost:8000/Usuario/"
+const urlBase = "http://localhost:8000/Usuario/";
 
 export const Data = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -30,8 +29,6 @@ export const postData = async (dataToSend) => {
   }
   return await res.json();
 };
-
-
 
 export const DataId = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 1000)); // 2 segundos de delay

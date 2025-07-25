@@ -36,8 +36,8 @@ export default function TableStaff() {
         </div>
       ),
     },
-    { key: "name", header: "Nombre", className: "w-[175px] px-8 text-left" },
-    { key: "species", header: "Especie" },
+    { key: "nombre", header: "Nombre", className: "w-[175px] px-8 text-left" },
+    { key: "condicion", header: "Condicion" },
 
     {
       key: "status",
